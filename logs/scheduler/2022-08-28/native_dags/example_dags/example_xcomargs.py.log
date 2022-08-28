@@ -1,0 +1,24 @@
+[2022-08-28T15:36:48.602+0600] {processor.py:153} INFO - Started process (PID=28638) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:36:48.605+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-08-28T15:36:48.607+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.606+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:36:48.644+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:36:48.751+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.751+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:example_xcom_args
+[2022-08-28T15:36:48.763+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.763+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_xcom_args
+[2022-08-28T15:36:48.772+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.772+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_xcom_args
+[2022-08-28T15:36:48.788+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.787+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:example_xcom_args_with_operators
+[2022-08-28T15:36:48.796+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.795+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_xcom_args_with_operators
+[2022-08-28T15:36:48.823+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.823+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_xcom_args_with_operators
+[2022-08-28T15:36:48.824+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.824+0600] {dag.py:2429} INFO - Sync 2 DAGs
+[2022-08-28T15:36:48.835+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.834+0600] {dag.py:2448} INFO - Creating ORM DAG for example_xcom_args_with_operators
+[2022-08-28T15:36:48.836+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.836+0600] {dag.py:2448} INFO - Creating ORM DAG for example_xcom_args
+[2022-08-28T15:36:48.848+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.848+0600] {dag.py:2981} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2022-08-28T15:36:48.849+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:48.849+0600] {dag.py:2981} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2022-08-28T15:36:48.866+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py took 0.270 seconds
+[2022-08-28T15:37:30.243+0600] {processor.py:153} INFO - Started process (PID=29250) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:37:30.244+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-08-28T15:37:30.245+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:30.245+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:37:30.268+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-08-28T15:37:30.330+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:30.330+0600] {dag.py:2429} INFO - Sync 2 DAGs
+[2022-08-28T15:37:30.349+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:30.349+0600] {dag.py:2981} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2022-08-28T15:37:30.350+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:30.349+0600] {dag.py:2981} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2022-08-28T15:37:30.362+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py took 0.122 seconds

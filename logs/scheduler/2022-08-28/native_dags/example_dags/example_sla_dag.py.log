@@ -1,0 +1,18 @@
+[2022-08-28T15:36:59.275+0600] {processor.py:153} INFO - Started process (PID=28790) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:36:59.277+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2022-08-28T15:36:59.279+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.278+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:36:59.305+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_sla_dag']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:36:59.394+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.394+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:example_sla_dag
+[2022-08-28T15:36:59.407+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.407+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_sla_dag
+[2022-08-28T15:36:59.416+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.415+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_sla_dag
+[2022-08-28T15:36:59.416+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.416+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:36:59.427+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.426+0600] {dag.py:2448} INFO - Creating ORM DAG for example_sla_dag
+[2022-08-28T15:36:59.445+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:59.444+0600] {dag.py:2981} INFO - Setting next_dagrun for example_sla_dag to 2022-08-28T09:34:00+00:00, run_after=2022-08-28T09:36:00+00:00
+[2022-08-28T15:36:59.460+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py took 0.191 seconds
+[2022-08-28T15:37:39.600+0600] {processor.py:153} INFO - Started process (PID=29396) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:37:39.603+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2022-08-28T15:37:39.605+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:39.604+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:37:39.630+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_sla_dag']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py
+[2022-08-28T15:37:39.652+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:39.652+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:37:39.686+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:39.686+0600] {dag.py:2981} INFO - Setting next_dagrun for example_sla_dag to 2022-08-28T09:34:00+00:00, run_after=2022-08-28T09:36:00+00:00
+[2022-08-28T15:37:39.699+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py took 0.103 seconds

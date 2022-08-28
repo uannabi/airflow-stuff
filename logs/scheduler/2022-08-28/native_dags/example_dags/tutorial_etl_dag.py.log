@@ -1,0 +1,18 @@
+[2022-08-28T15:36:46.124+0600] {processor.py:153} INFO - Started process (PID=28601) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:36:46.126+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py for tasks to queue
+[2022-08-28T15:36:46.128+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.128+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:36:46.140+0600] {processor.py:650} INFO - DAG(s) dict_keys(['tutorial_etl_dag']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:36:46.238+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.237+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:tutorial_etl_dag
+[2022-08-28T15:36:46.250+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.249+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:tutorial_etl_dag
+[2022-08-28T15:36:46.258+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.258+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:tutorial_etl_dag
+[2022-08-28T15:36:46.259+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.259+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:36:46.271+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.271+0600] {dag.py:2448} INFO - Creating ORM DAG for tutorial_etl_dag
+[2022-08-28T15:36:46.286+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:46.286+0600] {dag.py:2981} INFO - Setting next_dagrun for tutorial_etl_dag to None, run_after=None
+[2022-08-28T15:36:46.304+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py took 0.186 seconds
+[2022-08-28T15:37:27.869+0600] {processor.py:153} INFO - Started process (PID=29213) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:37:27.871+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py for tasks to queue
+[2022-08-28T15:37:27.873+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:27.872+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:37:27.885+0600] {processor.py:650} INFO - DAG(s) dict_keys(['tutorial_etl_dag']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py
+[2022-08-28T15:37:27.925+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:27.924+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:37:27.952+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:27.952+0600] {dag.py:2981} INFO - Setting next_dagrun for tutorial_etl_dag to None, run_after=None
+[2022-08-28T15:37:27.967+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial_etl_dag.py took 0.104 seconds

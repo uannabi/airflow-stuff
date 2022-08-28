@@ -1,0 +1,18 @@
+[2022-08-28T15:37:09.123+0600] {processor.py:153} INFO - Started process (PID=28932) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:09.126+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-08-28T15:37:09.128+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.127+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:09.139+0600] {processor.py:650} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:09.246+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.245+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:latest_only
+[2022-08-28T15:37:09.258+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.258+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:latest_only
+[2022-08-28T15:37:09.268+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.267+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:latest_only
+[2022-08-28T15:37:09.269+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.268+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:37:09.283+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.282+0600] {dag.py:2448} INFO - Creating ORM DAG for latest_only
+[2022-08-28T15:37:09.297+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:09.296+0600] {dag.py:2981} INFO - Setting next_dagrun for latest_only to 2022-08-28T05:37:09.296085+00:00, run_after=2022-08-28T09:37:09.296085+00:00
+[2022-08-28T15:37:09.315+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py took 0.197 seconds
+[2022-08-28T15:37:48.757+0600] {processor.py:153} INFO - Started process (PID=29535) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:48.759+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-08-28T15:37:48.760+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:48.760+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:48.768+0600] {processor.py:650} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py
+[2022-08-28T15:37:48.791+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:48.791+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:37:48.821+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:48.820+0600] {dag.py:2981} INFO - Setting next_dagrun for latest_only to 2022-08-28T05:37:48.820552+00:00, run_after=2022-08-28T09:37:48.820552+00:00
+[2022-08-28T15:37:48.836+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py took 0.083 seconds

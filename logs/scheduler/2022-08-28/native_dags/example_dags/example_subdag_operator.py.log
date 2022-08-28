@@ -1,0 +1,30 @@
+[2022-08-28T15:36:57.635+0600] {processor.py:153} INFO - Started process (PID=28767) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:36:57.654+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2022-08-28T15:36:57.655+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:57.655+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:36:57.707+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:36:57.898+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:57.897+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:example_subdag_operator
+[2022-08-28T15:36:57.924+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:57.923+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_subdag_operator
+[2022-08-28T15:36:57.954+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:57.954+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_subdag_operator
+[2022-08-28T15:36:57.975+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:57.974+0600] {dag.py:2429} INFO - Sync 3 DAGs
+[2022-08-28T15:36:58.006+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.005+0600] {dag.py:2448} INFO - Creating ORM DAG for example_subdag_operator.section-2
+[2022-08-28T15:36:58.017+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.016+0600] {dag.py:2448} INFO - Creating ORM DAG for example_subdag_operator
+[2022-08-28T15:36:58.018+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.018+0600] {dag.py:2448} INFO - Creating ORM DAG for example_subdag_operator.section-1
+[2022-08-28T15:36:58.034+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.033+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01T00:00:00+00:00, run_after=2022-01-01T00:00:00+00:00
+[2022-08-28T15:36:58.044+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.043+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2022-08-28T15:36:58.045+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.044+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2022-08-28T15:36:58.093+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.092+0600] {dag.py:2429} INFO - Sync 2 DAGs
+[2022-08-28T15:36:58.100+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.099+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2022-08-28T15:36:58.101+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:58.101+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2022-08-28T15:36:58.115+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py took 0.485 seconds
+[2022-08-28T15:37:38.262+0600] {processor.py:153} INFO - Started process (PID=29373) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:37:38.264+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2022-08-28T15:37:38.265+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.265+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:37:38.298+0600] {processor.py:650} INFO - DAG(s) dict_keys(['example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py
+[2022-08-28T15:37:38.410+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.409+0600] {dag.py:2429} INFO - Sync 3 DAGs
+[2022-08-28T15:37:38.445+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.444+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01T00:00:00+00:00, run_after=2022-01-01T00:00:00+00:00
+[2022-08-28T15:37:38.446+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.446+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2022-08-28T15:37:38.448+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.447+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2022-08-28T15:37:38.458+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.458+0600] {dag.py:2429} INFO - Sync 2 DAGs
+[2022-08-28T15:37:38.467+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.466+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2022-08-28T15:37:38.468+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:38.467+0600] {dag.py:2981} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2022-08-28T15:37:38.482+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py took 0.224 seconds

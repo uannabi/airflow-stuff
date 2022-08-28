@@ -1,0 +1,18 @@
+[2022-08-28T15:36:47.361+0600] {processor.py:153} INFO - Started process (PID=28616) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:36:47.362+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2022-08-28T15:36:47.364+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.363+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:36:47.375+0600] {processor.py:650} INFO - DAG(s) dict_keys(['tutorial']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:36:47.462+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.462+0600] {manager.py:508} INFO - Created Permission View: can read on DAG:tutorial
+[2022-08-28T15:36:47.473+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.472+0600] {manager.py:508} INFO - Created Permission View: can edit on DAG:tutorial
+[2022-08-28T15:36:47.481+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.481+0600] {manager.py:508} INFO - Created Permission View: can delete on DAG:tutorial
+[2022-08-28T15:36:47.482+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.481+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:36:47.493+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.493+0600] {dag.py:2448} INFO - Creating ORM DAG for tutorial
+[2022-08-28T15:36:47.508+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:47.507+0600] {dag.py:2981} INFO - Setting next_dagrun for tutorial to 2022-08-27T09:36:47.506342+00:00, run_after=2022-08-28T09:36:47.506342+00:00
+[2022-08-28T15:36:47.524+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py took 0.167 seconds
+[2022-08-28T15:37:29.102+0600] {processor.py:153} INFO - Started process (PID=29228) to work on /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:37:29.104+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2022-08-28T15:37:29.106+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:29.105+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:37:29.116+0600] {processor.py:650} INFO - DAG(s) dict_keys(['tutorial']) retrieved from /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2022-08-28T15:37:29.138+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:29.137+0600] {dag.py:2429} INFO - Sync 1 DAGs
+[2022-08-28T15:37:29.167+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:29.166+0600] {dag.py:2981} INFO - Setting next_dagrun for tutorial to 2022-08-27T09:37:29.166562+00:00, run_after=2022-08-28T09:37:29.166562+00:00
+[2022-08-28T15:37:29.185+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/example_dags/tutorial.py took 0.087 seconds

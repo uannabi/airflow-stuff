@@ -1,0 +1,102 @@
+[2022-08-28T15:36:39.911+0600] {processor.py:153} INFO - Started process (PID=28517) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:36:39.912+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:36:39.914+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:39.913+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:36:39.920+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:36:39.917+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:36:39.921+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:36:39.954+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.049 seconds
+[2022-08-28T15:37:22.610+0600] {processor.py:153} INFO - Started process (PID=29123) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:22.613+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:37:22.614+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:22.614+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:22.619+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:22.617+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:37:22.620+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:22.640+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.033 seconds
+[2022-08-28T15:37:33.118+0600] {processor.py:153} INFO - Started process (PID=29295) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:33.120+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:37:33.122+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:33.121+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:33.127+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:33.124+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:37:33.127+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:33.150+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.036 seconds
+[2022-08-28T15:37:43.521+0600] {processor.py:153} INFO - Started process (PID=29457) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:43.522+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:37:43.524+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:43.523+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:43.530+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:43.527+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:37:43.531+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:43.563+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.048 seconds
+[2022-08-28T15:37:52.764+0600] {processor.py:153} INFO - Started process (PID=29596) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:52.765+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:37:52.766+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:52.766+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:52.770+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:37:52.768+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:37:52.771+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:37:52.791+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.032 seconds
+[2022-08-28T15:38:02.623+0600] {processor.py:153} INFO - Started process (PID=29739) to work on /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:38:02.625+0600] {processor.py:640} INFO - Processing file /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py for tasks to queue
+[2022-08-28T15:38:02.626+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:38:02.625+0600] {dagbag.py:508} INFO - Filling up the DagBag from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:38:02.630+0600] {logging_mixin.py:115} INFO - [2022-08-28T15:38:02.628+0600] {dagbag.py:321} ERROR - Failed to import: /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+Traceback (most recent call last):
+  File "/Users/khoundokarzahid/opt/anaconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py", line 9
+    with DAG(dag_id='my_dag')
+                            ^
+SyntaxError: invalid syntax
+[2022-08-28T15:38:02.631+0600] {processor.py:652} WARNING - No viable dags retrieved from /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py
+[2022-08-28T15:38:02.652+0600] {processor.py:161} INFO - Processing /Users/khoundokarzahid/Stack/github/airflow-stuff/dags/my_dag.py took 0.034 seconds
