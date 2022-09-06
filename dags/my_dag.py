@@ -1,6 +1,8 @@
 from airflow import DAG
-from airflow.operator.python import PythonOperator, BranchPythonOperator
+from airflow.operators.python_operator import PythonOperator, BranchPythonOperator
+from airflow.utils.dates import days_ago
 from datetime import datetime
+import os, json, boto3, psutil, socket
 from random import randint
 
 from airflow.operators.bash import BashOperator
