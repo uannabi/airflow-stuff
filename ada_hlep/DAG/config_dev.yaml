@@ -1,0 +1,252 @@
+dag:
+  dag_id: demographic-model-full-cycle
+  schedule_interval: !!str '0 0 2 * *'
+  tags: ['kt','demographic']
+  catchup: false
+  default_args:
+    owner: airflow
+    depends_on_past: false
+    start_date: 2021-10-23T00:00:00
+    email: test@ada-asia.com
+    email_on_failure: false
+    email_on_retry: false
+    http_conn_id: !!str 'teams_notification_webhook'
+
+country:
+  - MY: large
+  - TH: large
+  - PH: large
+  - ID: large
+  - SG: large 
+  - LK: large
+  - BD: large
+  - KH: large
+  - MM: large
+
+athena_database : 'ada_bid_preprod'
+athena_output : 's3://ada-preprod-data/etl/athena/'
+
+# EMR
+emr_release: !!str emr-5.28.0
+emr_log_path: !!str s3://aws-logs-331041401449-us-east-1/elasticmapreduce/
+emr_packages: !!str org.apache.spark:spark-avro_2.11:2.4.0,org.apache.hadoop:hadoop-aws:2.7.7
+emr_bootstrap: >
+    [{
+        "Name": "churn_model_preprosessing_bootstrap",
+        "ScriptBootstrapAction": {
+            "Path": "s3://ada-dev/demographic_model/airflow/bootstrap/pre-install_ts.sh"
+        }
+    }]
+ServiceRole: EMR_ServiceRole
+JobFlowRole: EMR_EC2_ADARole
+ec2_key: &ec2_key !!str emr_key
+ec2_subnet: &ec2_subnet subnet-ea341ba1 # AZ: us-east-1a
+service_sg: &service_sg !!str sg-6ef90a18
+slave_sg: &slave_sg !!str sg-4c8c7f3a
+master_sg: &master_sg !!str sg-19f6056f
+cluster_config: &cluster_config [{
+                "Classification": "spark-env",
+                "Properties": {},
+                "Configurations": [
+                    {
+                        "Classification": "export",
+                        "Properties": {
+                            "PYSPARK_PYTHON": "/usr/bin/python3"
+                        }
+                    }
+                ]
+            }]
+
+large:
+    instance_type: {
+                        'Ec2KeyName': *ec2_key,
+                        'Ec2SubnetId': *ec2_subnet,
+                        'InstanceGroups': [
+                            {
+                                'Name': 'Master nodes',
+                                'Market': 'ON_DEMAND',
+                                'InstanceRole': 'MASTER',
+                                'InstanceType': 'm5.xlarge',
+                                'InstanceCount': 1
+                            }, {
+                                'Name': 'Slave nodes',
+                                'Market': 'ON_DEMAND',
+                                'InstanceRole': 'CORE',
+                                'InstanceType': 'm5.4xlarge',
+                                'InstanceCount': 20
+                            }
+                        ],
+                        'TerminationProtected': False,
+                        'KeepJobFlowAliveWhenNoSteps': False,
+                        'ServiceAccessSecurityGroup': *service_sg,
+                        'EmrManagedSlaveSecurityGroup': *slave_sg,
+                        'EmrManagedMasterSecurityGroup': *master_sg
+                    }
+    cluster_config: *cluster_config
+    steps_config: {
+           'num-executors': 59,
+           'driver-memory': '32G',
+           'driver-cores': 5,
+           'executor-memory': '32G',
+           'executor-cores': 5
+    }
+
+small:
+    instance_type: {
+                        'Ec2KeyName': *ec2_key,
+                        'Ec2SubnetId': *ec2_subnet,
+                        'InstanceGroups': [
+                            {
+                                'Name': 'Master nodes',
+                                'Market': 'ON_DEMAND',
+                                'InstanceRole': 'MASTER',
+                                'InstanceType': 'r5.xlarge',
+                                'InstanceCount': 1
+                            }, {
+                                'Name': 'Slave nodes',
+                                'Market': 'ON_DEMAND',
+                                'InstanceRole': 'CORE',
+                                'InstanceType': 'r5.2xlarge',
+                                'InstanceCount': 5
+                            }
+                        ],
+                        'TerminationProtected': False,
+                        'KeepJobFlowAliveWhenNoSteps': False,
+                        'ServiceAccessSecurityGroup': *service_sg,
+                        'EmrManagedSlaveSecurityGroup': *slave_sg,
+                        'EmrManagedMasterSecurityGroup': *master_sg
+                    }
+    cluster_config: *cluster_config
+    steps_config: {
+           'num-executors': 14,
+           'driver-memory': '32G',
+           'driver-cores': 5,
+           'executor-memory': '32G',
+           'executor-cores': 5
+    }
+
+#'Key': 'Environment', ## [Test or Production], must be one of these 2 options only
+#'Key': 'Department', ## [BO BE DE ML BI IP], one of these, depending on the department you are with.
+emr_tag: >
+  [
+    {
+        'Key': 'Environment',
+        'Value': 'Test'
+    },
+    {
+        'Key': 'Department',
+        'Value': 'AI-Ops'
+    },
+    {
+        'Key': 'Name',
+        'Value': 'Demographic model'
+    },
+    {
+        'Key': 'Project',
+        'Value': 'AI-MLOps'
+    },
+    {
+        'Key': 'Engineer',
+        'Value': 'farshid.hossein@ada-asia.com'
+    },
+    {
+        'Key': 'JiraNo',
+        'Value': 'DS-524'
+    }
+  ]
+
+
+  
+# s3 path of codes
+S3_PATH: !!str s3://ada-dev/demographic_model/airflow/
+S3_PATH_CODE: !!str s3://ada-dev/demographic_model/airflow/original_script
+model_training_script: /opt/airflow/dags/demographic/all/spark/train.py
+# model_training_script_s3: /opt/airflow/dags/demographic_model/all/spark/demo_model.py
+
+code_location: s3://ada-preprod-ml/source
+
+path_data:
+    label_path : s3://ada-dev/demographic_model/airflow/label/
+    Base_Label_data_path: s3://ada-platform-components/demographics/label/base_label/ ## in my_accurat app 
+    label_NOT_MY_data_path : s3://ada-dev/demographic_model/airflow/raw_user_demo/
+    App_Ref_Data : s3://ada-dev/demographic_model/airflow/accurate_bundle/ ## output path of my accurate app and input accurate app as app_ref_path     **
+    model_output_path: s3://ada-dev/demographic_model/airflow/model/ ## model output , used in demo_model
+    app_ref_path : s3://ada-prod-data/etl/data/ref/bundle/segment/monthly/all/all/
+    output_path_pred : s3://ada-dev/demographic_model/airflow/prediction/    
+    model_path_hist: s3://ada-platform-components/demographics/model/
+    model_app_path: s3://ada-platform-components/demographics/label/model_app/
+    weight_path : s3://ada-platform-components/demographics/distribution_target/model_weightage.csv
+    data_source: s3://ada-prod-data/etl/data/brq/agg/agg_brq/monthly/
+    preprocess_path: s3://ada-dev/demographic_model/airflow/preprocess/
+    valid_app_ref: s3://ada-platform-components/demographics/label/model_app/ref_valid_app.csv
+    train_path : s3://ada-dev/demographic_model/airflow/training/
+    hist_path : s3://ada-platform-components/demographics/output/
+job_level: 
+    SAGEMAKER_ROLE_NAME: AmazonSageMaker-ExecutionRole-20201118T195260
+    BUCKET: ada-dev
+    EXPERIMENT_NAME: demographic-model-example-experiment
+    DESCRIPTION: demographic model for predict age and gender
+#     MODEL_PACKAGE_GRP: churn-model
+#     EVALUATION_METRIC: test:acc
+#     EVALUATION_METRIC_THRESHOLD: 0.9
+    PRIVATE_SM_IMAGE: 331041401449.dkr.ecr.us-east-1.amazonaws.com/sagemaker-scikit-learn:0.23-1-cpu-py3
+
+demo_params:
+    upsample: False
+    std-scale: False
+    norm-scale: False
+    to-pca: False
+    balance-dataset: False
+    decile-accuracy: False
+    n-jobs: -1
+    scale-pos-weight: 0.35
+    max-bin: 50
+    max-depth: 7
+    num-leaves: 300
+    single-sim: False
+
+# singlesim_params:
+#     upsample: False
+#     std-scale: False
+#     norm-scale: False
+#     to-pca: False
+#     balance-dataset: False
+#     decile-accuracy: False
+#     n-jobs: -1
+#     scale-pos-weight: 0.4
+#     #max-bin: 50
+#     #max-depth: 7
+#     #num-leaves: 300
+#     single-sim: True
+
+train_model:
+    model_name: 'lr'
+    # hyperparameters: {
+    #     'n_estimator': 10,
+    #     'min_sample_leaf': 3,
+    #     'feature_list': 'carrier, brq_count_p_0, num_days_p_0, brq_count_p_1, num_days_p_1, brq_count_p_2, num_days_p_2, brq_count_p_3, num_days_p_3, brq_count_p_4, num_days_p_4, brq_count_p_5, num_days_p_5, n_switches, age',
+    #     'target_col': 'is_churn'
+    # }
+    # instance: {
+    #     'train_instance_count': 1,
+    #     'train_instance_type': 'ml.m5.xlarge',
+    #     'train_volume_size': 5, #in GB
+        # 'train_max_run': 3600 # in seconds
+    # }
+
+inference:
+    data: {
+        'TRANSFORM_DATA_INPUT': 's3a://ada-platform-components/telco_churn_predictor/model_2021_v2/monthly_predictions',
+        'TRANSFORM_DATA_OUTPUT': 's3a://ada-platform-components/telco_churn_predictor/model_2021_v2/monthly_predictions'
+    }
+    parameters: {
+        'content_type': 'text/csv',
+        'join_source': 'Input',
+        'split_type': 'Line'
+    }
+    instance: {
+        'instance_count': 1,
+        'instance_type': 'ml.m4.16xlarge'
+    }
+
+
