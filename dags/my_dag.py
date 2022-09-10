@@ -1,11 +1,9 @@
 from airflow import DAG
 from airflow.operators import PythonOperator, BranchPythonOperator
 from datetime import datetime
-import os, json, boto3, psutil, socket
 from random import randint
-
 from airflow.operators.bash import BashOperator
-
+import os, json, boto3, psutil, socket
 
 def _choose_best_model(ti):
     accuracies = ti.xcom_pull(task_ids=[
