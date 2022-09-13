@@ -12,7 +12,7 @@ with DAG("connection", start_date=datetime(2022, 8, 28),
     connection_check = MySqlOperator(
         task_id='check_connection',
         mysql_conn_id='mysql_fx',
-        dag=dag
+        sql='param-query.sql'
     )
 
     connection_result = BashOperator(
