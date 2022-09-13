@@ -5,6 +5,7 @@ from airflow import DAG
 from datetime import datetime
 from random import randint
 from airflow.operators.bash import BashOperator
+from airflow.operators.python_operator import PythonOperator
 import os, json, boto3, psutil, socket
 
 with DAG("connection", start_date=datetime(2022, 8, 28),
@@ -15,7 +16,7 @@ with DAG("connection", start_date=datetime(2022, 8, 28),
         sql='param-query.sql'
     )
 
-    connection_result = BashOperator(
+    connection_result = PythonOperator(
         print("Connection Successful")
     )
 
