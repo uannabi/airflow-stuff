@@ -15,9 +15,4 @@ with DAG("connection", start_date=datetime(2022, 8, 28),
         mysql_conn_id='mysql_fx',
         sql='param-query.sql'
     )
-
-    connection_result = PythonOperator(
-        print("Connection Successful")
-    )
-
-    connection_check >> connection_result
+    connection_check
