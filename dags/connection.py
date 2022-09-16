@@ -58,7 +58,7 @@ def select_pet(**kwargs):
         conn = pymssql.connect(
             server='prod-mysql-fex.cluster-cogcq2nkkra1.ap-southeast-3.rds.amazonaws.com',
             user='data_reader',
-            password='liTORTeRNICU',
+            password='liTORTeRNICU___fd',
             database='fasset_exchange'
         )
 
