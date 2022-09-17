@@ -10,7 +10,7 @@ from airflow.hooks.S3_hook import S3Hook
 default_args = {
     'owner': 'aws',
     'depends_on_past': False,
-    'start_date': datetime(2010, 2, 20),
+    'start_date': datetime(2022, 2, 20),
     'provide_context': True
 }
 
