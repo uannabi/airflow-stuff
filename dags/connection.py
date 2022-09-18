@@ -1,11 +1,17 @@
+import pandas as pd
 import pymssql
 import logging
 import sys
+import pyspark.sql
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.mssql_operator import MsSqlOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.hooks.S3_hook import S3Hook
+from io import BytesIO
+s3_hook = S3Hook(aws_conn_id="s3_conn", region_name="ap-southeast-1")
+
+buket_name = "BUCKET_NAME"
 
 default_args = {
     'owner': 'aws',
@@ -16,41 +22,18 @@ default_args = {
 
 dag = DAG(
     'mssql_conn_example', default_args=default_args, schedule_interval=None)
+
+
 def upload_to_s3(filename: str, key: str, bucket_name: str) -> None:
     hook = S3Hook('s3_conn')
     hook.load_file(filename=filename, key=key, bucket_name=bucket_name)
 
-# drop_db = MsSqlOperator(
-#     task_id="drop_db",
-#     sql="DROP DATABASE IF EXISTS testdb;",
-#     mssql_conn_id="mssql_default",
-#     autocommit=True,
-#     dag=dag
-# )
 
-# create_db = MsSqlOperator(
-#     task_id="create_db",
-#     sql="create database testdb;",
-#     mssql_conn_id="mssql_default",
-#     autocommit=True,
-#     dag=dag
-# )
 
-# create_table = MsSqlOperator(
-#     task_id="create_table",
-#     sql="CREATE TABLE testdb.dbo.pet (name VARCHAR(20), owner VARCHAR(20));",
-#     mssql_conn_id="mssql_default",
-#     autocommit=True,
-#     dag=dag
-# )
-
-# insert_into_table = MsSqlOperator(
-#     task_id="insert_into_table",
-#     sql="INSERT INTO testdb.dbo.pet VALUES ('Olaf', 'Disney');",
-#     mssql_conn_id="mssql_default",
-#     autocommit=True,
-#     dag=dag
-# )
+spark = pyspark.sql.SparkSession \
+    .builder \
+    .appName("Python Spark SQL basic example") \
+    .getOrCreate()
 
 
 def select_pet(**kwargs):
@@ -58,20 +41,25 @@ def select_pet(**kwargs):
         conn = pymssql.connect(
             server='prod-mysql-fex.cluster-cogcq2nkkra1.ap-southeast-3.rds.amazonaws.com',
             user='data_reader',
-            password='liTORTeRNICU___fd',
+            password='liTORTeRNICU',
             database='fasset_exchange'
         )
 
         # Create a cursor from the connection
         cursor = conn.cursor()
-        cursor.execute("SELECT * from users ")
+        query = cursor.execute("SELECT * from users ")
         row = cursor.fetchone()
+        users = pd.read_sql(query, con=conn)
+        conn.close()
+        df = spark.createDataFrame(users)
+
+        return df
 
         if row:
             print(row)
     except:
         logging.error("Error when creating pymssql database connection: %s", sys.exc_info()[0])
-
+        return print('no data')
 
 
 select_query = PythonOperator(
@@ -80,15 +68,31 @@ select_query = PythonOperator(
     dag=dag,
 )
 
-# Upload the file
-task_upload_to_s3 = PythonOperator(
-    task_id='upload_to_s3',
-    python_callable=upload_to_s3,
-    op_kwargs={
-        'filename': '/Users/dradecic/airflow/data/posts.json',
-        'key': 'posts.json',
-        'bucket_name': 'airflow-etl-fex'
-    }
+
+def sendDataToS3(df):
+
+    apple_df = df
+
+    region = "eu-central-1"
+    # print(apple_df)
+    csv_buffer = BytesIO
+    apple_df.to_csv(csv_buffer)
+
+    s3_hook._upload_file_obj(file_obj=csv_buffer.getvalue(), key=f"apple_data_{datetime.now()}.csv",
+                             bucket_name=bucket_name)
+    # s3_resource.Object(bucket, f"apple_data_{datetime.now()}.csv").put(Body=csv_buffer.getvalue())
+
+
+t3 = PythonOperator(
+    task_id="UploadToS3",
+    python_callable=sendDataToS3,
+    dag=dag
 )
+
+
+
+
+# Upload the file
+
 
 select_query
