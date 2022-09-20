@@ -37,10 +37,10 @@ usersKyc_db = MsSqlOperator(
 def select_pet(**kwargs):
     try:
         conn = pymssql.connect(
-            server='prod-mysql-fex.cluster-cogcq2nkkra1.ap-southeast-3.rds.amazonaws.com',
-            user='data_reader',
-            password='liTORTeRNICU',
-            database='fasset_exchange'
+            server='host',
+            user='user',
+            password='pass',
+            database='db'
         )
 
         # Create a cursor from the connection

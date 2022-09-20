@@ -1,7 +1,4 @@
-import airflow
-from airflow.models import DAG
-from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
+
 from airflow.hooks.S3_hook import S3Hook
 from etl import *
 s3_hook = S3Hook(aws_conn_id="s3_conn", region_name="ap-southeast-1")
