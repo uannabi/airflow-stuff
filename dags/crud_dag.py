@@ -9,7 +9,7 @@ from airflow.operators.python_operator import PythonOperator
 default_args = {
     'owner': 'zun',
     'depends_on_past': False,
-    'start_date': datetime(2022, 2, 20),
+    'start_date': datetime(2022, 9, 20),
     'provide_context': True
 }
 
