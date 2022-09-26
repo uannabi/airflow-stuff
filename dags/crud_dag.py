@@ -32,7 +32,6 @@ usersKyc_db = MsSqlOperator(
     dag=dag
 )
 
-
 def select_pet(**kwargs):
     try:
         conn = pymssql.connect(
